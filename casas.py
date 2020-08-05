@@ -1,14 +1,15 @@
 import os
-from flask import render_template
-from flask import Flask, jsonify, request
-
+from flask import Flask, jsonify, request, render_template
 
 
 app = Flask(__name__)
 
 @app.route('/')
-def index():
-   return render_template('index.html', title='Home')
+def nao_entre_em_panico():
+    
+    if request.headers.get('Authorization') == '42':
+        return jsonify({"42": "a resposta para a vida, o universo e tudo mais"})
+    return jsonify({"message": "Teste de deploy Não entre em pânico!"})
 
 @app.route('/teste')
 def testpoint():
