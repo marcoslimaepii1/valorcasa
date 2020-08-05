@@ -14,6 +14,7 @@ def nao_entre_em_panico():
 @app.route('/teste')
 def testpoint():
     valor = request.args.get('key1')
+    
     return jsonify(valor)
     
 
