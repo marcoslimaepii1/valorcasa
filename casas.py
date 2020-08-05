@@ -5,11 +5,12 @@ from flask import Flask, jsonify, request, render_template
 app = Flask(__name__)
 
 @app.route('/')
-def nao_entre_em_panico():
+@app.route('/index')
+def index():
     
     if request.headers.get('Authorization') == '42':
         return jsonify({"42": "a resposta para a vida, o universo e tudo mais"})
-    return jsonify({"message": "Teste de deploy Não entre em pânico!"})
+    return jsonify({"message": "Teste  com index "})
 
 @app.route('/teste')
 def testpoint():
