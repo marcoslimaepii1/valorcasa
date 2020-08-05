@@ -10,6 +10,11 @@ def nao_entre_em_panico():
     if request.headers.get('Authorization') == '42':
         return jsonify({"42": "a resposta para a vida, o universo e tudo mais"})
     return jsonify({"message": "Teste de deploy Não entre em pânico!"})
+
+@app.route('/teste', methods = ['POST'])
+def testpoint():
+    name = request.args.get('name', '')
+    return jsonify(name = name)
     
 
 
