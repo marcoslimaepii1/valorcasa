@@ -1,12 +1,13 @@
 import os
 from flask import Flask, jsonify, request
+from app import app
 
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-   return render_template('index.html')
+   return render_template('index.html', title='Home')
 
 @app.route('/teste')
 def testpoint():
