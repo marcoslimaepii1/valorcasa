@@ -2,7 +2,7 @@ import os
 from flask import Flask, jsonify, request, render_template
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 @app.route('/')
 @app.route('/index')
