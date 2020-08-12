@@ -4,6 +4,10 @@ from flask import Flask, jsonify, request, render_template
 
 app = Flask(__name__, template_folder='templates')
 
+def preco(key1,key2):
+    return 50000
+
+
 @app.route('/')
 @app.route('/index')
 def index():
@@ -16,6 +20,9 @@ def testpoint():
 
     quartos = ''
     area = ''
+    preco_estimado=preco(key1, key2)
+
+
 
     if valor1 =='1':
          quartos = '1 quarto'
@@ -40,13 +47,13 @@ def testpoint():
     elif valor2 =='4':
          area = 'maior que 300 m2 e menor ou iual a 400 m2'
     elif valor2 =='5':
-         area = 'maior que ou igual a 500 m2'
+         area = 'maior que 300 m2 e menor ou iual a 400 m2'
+    elif valor2 =='6':
+         area = 'maior que 500 m2 '
+        
     
-
-
-    return render_template('calculo.html', v1=quartos, v2=area)
+    return render_template('calculo.html', v1=quartos, v2=area, v3=preco_estimado)
     
-
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
