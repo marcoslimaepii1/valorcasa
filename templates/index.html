@@ -17,6 +17,25 @@ Forne&ccedil;a os os dados para a avali&ccedil;&atilde;o.<br />
 &nbsp; &nbsp; &nbsp;&Aacute;rea&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<select><option value="1">&lt;= 100</option><option value="2">&gt;100 &lt;=200</option><option value="3">&gt;200 &lt;=300</option><option value="4">&gt;300 &lt;=400</option><option value="5">&gt;400 &lt;=500</option><option value="6">&gt; 500</option></select>&nbsp; &nbsp;<br />
 <br />
 <br />
-<a href="https://valorcasa.herokuapp.com/calcula?key1=teste" target="_self">https://valorcasa.herokuapp.com/calcula?key1=teste</a></div>
+<input type="button" value="Calcula" onclick="calcula();" />
+
 </body>
+
+<script type="text/javascript">
+    function calcula() {
+        var surl = 'https://valorcasa.herokuapp.com/calcula?key1=';
+        var key1 = key1
+        var key2 = key2
+
+        surl = surl + key1+'?key2='+key2
+
+        window.location.assign(surl);
+    }
+   
+</script>
+
+
+
+
+
 </html>

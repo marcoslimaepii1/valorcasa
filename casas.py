@@ -11,9 +11,10 @@ def index():
 
 @app.route('/calcula')
 def testpoint():
-    valor = request.args.get('key1')
-    
-    return jsonify(valor)
+    valor1 = request.args.get('key1')
+    valor2 = request.args.get('key2')
+
+    return jsonify(valor2)
     
 
 
