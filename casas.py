@@ -14,7 +14,37 @@ def testpoint():
     valor1 = request.args.get('key1')
     valor2 = request.args.get('key2')
 
-    return render_template('calculo.html', v1=valor1, v2=valor2)
+    quartos = ''
+    area = ''
+
+    if valor1 ==1:
+         quartos = '1 quarto'
+    elif valor1 ==2:
+         quartos = '2 quartos'
+    elif valor1 ==3:
+         quartos = '2 quartos'
+    elif valor1 ==4:
+         quartos = '4 quartos'
+    elif valor1 ==5:
+         quartos = '5 quartos'
+    elif valor1 ==6:
+         quartos = '6 ou mais quartos'
+         
+
+    if valor2 ==1:
+         area = 'menor ou iual a 100 m2'
+    elif valor2 ==2:
+         area = 'maior que 100 m2 e menor ou iual a 200 m2'
+    elif valor2 ==3:
+         area = 'maior que 200 m2 e menor ou iual a 300 m2'
+    elif valor2 ==4:
+         area = 'maior que 300 m2 e menor ou iual a 400 m2'
+    elif valor2 ==5:
+         area = 'maior que ou igual a 500 m2'
+    
+
+
+    return render_template('calculo.html', v1=quartos, v2=area)
     
 
 
