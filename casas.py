@@ -20,7 +20,7 @@ def testpoint():
 
     quartos = ''
     area = ''
-    preco_estimado=preco(key1, key2)
+    preco_estimado=preco(valor1, valor2)
 
 
 
