@@ -9,70 +9,70 @@ def preco(key1,key2):
     returns=0
     if key2 == '1':
         if key1 == '1':
-            returns = '81280'
+            returns = 'possuem valor aproximado de R$ 81.280'
         elif key1 == '2':
-            returns = '1622560'
+            returns = 'possuem valor aproximado de R$ 162.256'
         else:
             returns = 'não definido'
     elif key2 == '2':
         if key1 == '1':
-            returns = '95000'
+            returns = 'possuem valor aproximado de R$ 95.000'
         elif key1 == '2':
-            returns = '190000'
+            returns = 'possuem valor aproximado de R$ 190.000'
         elif key1 == '3':
-            returns = '285000'
+            returns = 'possuem valor aproximado de R$ 285.000'
         else:
             returns = 'não definido'
     elif key2 == '3':
         if key1 == '1':
-            returns = '150000'
+            returns = 'possuem valor aproximado de R$ 150.000'
         elif key1 == '2':
-            returns = '300000'
+            returns = 'possuem valor aproximado de R$ 300.000'
         elif key1 == '3':
-            returns = '450000'
+            returns = 'possuem valor aproximado de R$ 450.000'
         elif key1 == '4':
-            returns = '600000'
+            returns = 'possuem valor aproximado de R$ 600.000'
         else:
             returns = 'não definido'
     elif key2 == '4':
         if key1 == '1':
-            returns = '187000'
+            returns = 'possuem valor aproximado de R$ 187.000'
         elif key1 == '2':
-            returns = '374000'
+            returns = 'possuem valor aproximado de R$ 374.000'
         elif key1 == '3':
-            returns = '561000'
+            returns = 'possuem valor aproximado de R$ 561.000'
         elif key1 == '4':
-            returns = '748000'
+            returns = 'possuem valor aproximado de R$ 748.000'
         elif key1 == '5':
-            returns = '935000'
+            returns = 'possuem valor aproximado de R$ 935.000'
         else:
             returns = 'não definido'
 
     elif key2 == '5':
         if key1 == '1':
-            returns = '223000'
+            returns = 'possuem valor aproximado de R$ 223.000'
         elif key1 == '2':
-            returns = '446000'
+            returns = 'possuem valor aproximado de R$ 446.000'
         elif key1 == '3':
-            returns = '669000'
+            returns = 'possuem valor aproximado de R$ 669.000'
         elif key1 == '4':
-            returns = '892000'
+            returns = 'possuem valor aproximado de R$ 892.000'
         elif key1 == '5':
-            returns = '1115000'
+            returns = 'possuem valor aproximado de R$ 1.115.000'
         else:
             returns = 'não definido'
 
     elif key2 == '6':
         if key1 == '1':
-            returns = '235000'
+            returns = 'possuem valor aproximado de R$ 235.000'
         elif key1 == '2':
-            returns = '470000'
+            returns = 'possuem valor aproximado de R$ 470.000'
         elif key1 == '3':
-            returns = '705000'
+            returns = 'possuem valor aproximado de R$ 705.000'
         elif key1 == '4':
-            returns = '940000'
+            returns = 'possuem valor aproximado de R$ 940.000'
         elif key1 == '5':
-            returns = '1175000'
+            returns = 'possuem valor aproximado de R$ 1.175.000'
         else:
             returns = 'não definido'
 
