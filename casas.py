@@ -9,7 +9,7 @@ app = Flask(__name__, template_folder='templates')
 def index():
     return render_template('index.html')
 
-@app.route('/teste')
+@app.route('/calcula')
 def testpoint():
     valor = request.args.get('key1')
     
