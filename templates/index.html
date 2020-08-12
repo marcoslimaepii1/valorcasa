@@ -11,10 +11,10 @@
 Forne&ccedil;a os os dados para a avali&ccedil;&atilde;o.<br />
 <br />
 <br />
-&nbsp;Qtd. Quartos&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input alt="" src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fthumbs.dreamstime.com%2Fz%2Fcasa-modelo-de-vetor-com-o-arquivo-do-eps-do-vetor-10670313.jpg&amp;imgrefurl=https%3A%2F%2Fpt.dreamstime.com%2Ffotos-de-stock-casa-modelo-de-vetor-com-o-arquivo-do-eps-do-vetor-image10670313&amp;tbnid=NtEEIHyD2rCVwM&amp;vet=10CAEQMyhoahcKEwjQ5K2tqpbrAhUAAAAAHQAAAAAQAg..i&amp;docid=UJYJAFPo09jYpM&amp;w=1300&amp;h=1092&amp;q=imagem%20casa&amp;ved=0CAEQMyhoahcKEwjQ5K2tqpbrAhUAAAAAHQAAAAAQAg" type="image" />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<select name="Quartos"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6+">6+</option></select></div>
+&nbsp;Qtd. Quartos&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input alt="" src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fthumbs.dreamstime.com%2Fz%2Fcasa-modelo-de-vetor-com-o-arquivo-do-eps-do-vetor-10670313.jpg&amp;imgrefurl=https%3A%2F%2Fpt.dreamstime.com%2Ffotos-de-stock-casa-modelo-de-vetor-com-o-arquivo-do-eps-do-vetor-image10670313&amp;tbnid=NtEEIHyD2rCVwM&amp;vet=10CAEQMyhoahcKEwjQ5K2tqpbrAhUAAAAAHQAAAAAQAg..i&amp;docid=UJYJAFPo09jYpM&amp;w=1300&amp;h=1092&amp;q=imagem%20casa&amp;ved=0CAEQMyhoahcKEwjQ5K2tqpbrAhUAAAAAHQAAAAAQAg" type="image" />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<select id="quartos" name="quartos"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6+">6+</option></select></div>
 
 <div style="text-align: center;"><br />
-&nbsp; &nbsp; &nbsp;&Aacute;rea&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<select><option value="1">&lt;= 100</option><option value="2">&gt;100 &lt;=200</option><option value="3">&gt;200 &lt;=300</option><option value="4">&gt;300 &lt;=400</option><option value="5">&gt;400 &lt;=500</option><option value="6">&gt; 500</option></select>&nbsp; &nbsp;<br />
+&nbsp; &nbsp; &nbsp;&Aacute;rea&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<select id="area" name="area"><option value="1">&lt;= 100</option><option value="2">&gt;100 &lt;=200</option><option value="3">&gt;200 &lt;=300</option><option value="4">&gt;300 &lt;=400</option><option value="5">&gt;400 &lt;=500</option><option value="6">&gt; 500</option></select>&nbsp; &nbsp;<br />
 <br />
 <br />
 <input type="button" value="Calcula" onclick="calcula();" />
@@ -24,8 +24,13 @@ Forne&ccedil;a os os dados para a avali&ccedil;&atilde;o.<br />
 <script type="text/javascript">
     function calcula() {
         var surl = 'https://valorcasa.herokuapp.com/calcula?key1=';
-        var key1 = key1
-        var key2 = key2
+
+
+        var select = document.getElementById('quartos');
+	    var key1 = select.options[select.selectedIndex].value;
+
+        var select1 = document.getElementById('area');
+	    var key2 = select1.options[select1.selectedIndex].value;
 
         surl = surl + key1+'?key2='+key2
 
