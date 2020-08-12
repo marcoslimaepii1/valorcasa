@@ -5,7 +5,78 @@ from flask import Flask, jsonify, request, render_template
 app = Flask(__name__, template_folder='templates')
 
 def preco(key1,key2):
-    return 50000
+    
+    returns=0
+    if key2 == '1':
+        if key1 == '1':
+            returns = '81280'
+        elif key1 == '2':
+            returns = '1622560'
+        else:
+            returns = 'não definido'
+    elif key2 == '2':
+        if key1 == '1':
+            returns = '95000'
+        elif key1 == '2':
+            returns = '190000'
+        elif key1 == '3':
+            returns = '285000'
+        else:
+            returns = 'não definido'
+    elif key2 == '3':
+        if key1 == '1':
+            returns = '150000'
+        elif key1 == '2':
+            returns = '300000'
+        elif key1 == '3':
+            returns = '450000'
+        elif key1 == '4':
+            returns = '600000'
+        else:
+            returns = 'não definido'
+    elif key2 == '4':
+        if key1 == '1':
+            returns = '187000'
+        elif key1 == '2':
+            returns = '374000'
+        elif key1 == '3':
+            returns = '561000'
+        elif key1 == '4':
+            returns = '748000'
+        elif key1 == '5':
+            returns = '935000'
+        else:
+            returns = 'não definido'
+
+    elif key2 == '5':
+        if key1 == '1':
+            returns = '223000'
+        elif key1 == '2':
+            returns = '446000'
+        elif key1 == '3':
+            returns = '669000'
+        elif key1 == '4':
+            returns = '892000'
+        elif key1 == '5':
+            returns = '1115000'
+        else:
+            returns = 'não definido'
+
+    elif key2 == '6':
+        if key1 == '1':
+            returns = '235000'
+        elif key1 == '2':
+            returns = '470000'
+        elif key1 == '3':
+            returns = '705000'
+        elif key1 == '4':
+            returns = '940000'
+        elif key1 == '5':
+            returns = '1175000'
+        else:
+            returns = 'não definido'
+
+    return returns
 
 
 @app.route('/')
