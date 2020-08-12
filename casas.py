@@ -14,7 +14,7 @@ def testpoint():
     valor1 = request.args.get('key1')
     valor2 = request.args.get('key2')
 
-    return render_template('calculo.html')
+    return render_template('calculo.html', v1=valor1, v2=valor2)
     
 
 
